@@ -12,7 +12,7 @@ export class AppComponent {
 
   liste_language = ['en', 'fr'];
   isCollapsed = false;
-  title = 'taMereEnSlip';
+  title = 'MeteoAngularNgrx';
   listRoute = [];
   language = 'en';
   titleCity = '';

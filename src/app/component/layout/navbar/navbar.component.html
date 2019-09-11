@@ -1,18 +1,18 @@
 <div class="logo">
     <p><img [ngClass]="{'marginNormal': !isCollapsed, 'marginCollapsed': isCollapsed}" src="assets/image/logo.png">
-        <span *ngIf="!isCollapsed" [translate]="'ta-mere-en-slip.layout.navBar.title'">title</span></p>
+        <span *ngIf="!isCollapsed" [translate]="'meteo-angular-ngrx.layout.navBar.title'">title</span></p>
 </div>
 <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
     <li nz-menu-item>
         <a routerLink="/" routerLinkActive="active">
             <fa-icon icon="home"></fa-icon>
-            <span *ngIf="!isCollapsed" [translate]="'ta-mere-en-slip.layout.navBar.home'"></span>
+            <span *ngIf="!isCollapsed" [translate]="'meteo-angular-ngrx.layout.navBar.home'"></span>
         </a>
     </li>
     <li class="ant-menu-item cursorNormal">
         <div class="example-input">
             <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
-                <input type="text" placeholder="{{'ta-mere-en-slip.layout.navBar.searchPlaceholder' | translate}}" nz-input [(ngModel)]="inputValue"
+                <input type="text" placeholder="{{'meteo-angular-ngrx.layout.navBar.searchPlaceholder' | translate}}" nz-input [(ngModel)]="inputValue"
                     (input)="onInput($event.target?.value)" [nzAutocomplete]="auto" />
             </nz-input-group>
             <ng-template #suffixIconButton>
@@ -30,14 +30,14 @@
     <li nz-menu-item>
         <a routerLink="/Contact" routerLinkActive="active">
             <fa-icon icon="address-book"></fa-icon>
-            <span *ngIf="!isCollapsed" [translate]="'ta-mere-en-slip.layout.navBar.contact'">Contact</span>
+            <span *ngIf="!isCollapsed" [translate]="'meteo-angular-ngrx.layout.navBar.contact'">Contact</span>
         </a>
     </li>
     <li nz-menu-divider></li>
     <li class="ant-menu-item cursorNormal">
         <a nz-dropdown [nzDropdownMenu]="menu">
             <fa-icon icon="language"></fa-icon>
-            <span *ngIf="!isCollapsed" [translate]="'ta-mere-en-slip.layout.navBar.language'"></span>
+            <span *ngIf="!isCollapsed" [translate]="'meteo-angular-ngrx.layout.navBar.language'"></span>
         </a>
         <nz-dropdown-menu #menu="nzDropdownMenu">
             <ul nz-menu>

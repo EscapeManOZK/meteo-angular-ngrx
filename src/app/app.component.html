@@ -12,7 +12,7 @@
     <app-error></app-error>
     <nz-content>
       <nz-breadcrumb>
-        <nz-breadcrumb-item *ngFor="let route of listRoute"><span *ngIf="(isMeteo&&route==='meteo')||!isMeteo" [translate]="'ta-mere-en-slip.breadcrumb.' + route"></span><span *ngIf="isMeteo&&route!=='meteo'">{{titleCity}}</span></nz-breadcrumb-item>
+        <nz-breadcrumb-item *ngFor="let route of listRoute"><span *ngIf="(isMeteo&&route==='meteo')||!isMeteo" [translate]="'meteo-angular-ngrx.breadcrumb.' + route"></span><span *ngIf="isMeteo&&route!=='meteo'">{{titleCity}}</span></nz-breadcrumb-item>
       </nz-breadcrumb>
       <div class="inner-content">
         <router-outlet></router-outlet>
