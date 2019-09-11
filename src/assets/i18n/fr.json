@@ -2,7 +2,7 @@
     "meteo-angular-ngrx": {
       "layout": {
         "navBar": {
-          "title": "Ta mère en slip",
+          "title": "Météo angular avec ngrx",
           "home": " Accueil",
           "contact": " Contact",
           "language": " Langage",

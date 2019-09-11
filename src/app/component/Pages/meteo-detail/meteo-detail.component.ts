@@ -28,6 +28,7 @@ export class MeteoDetailComponent implements OnInit {
   language: string;
   
   loading = true;
+  id: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -43,14 +44,17 @@ export class MeteoDetailComponent implements OnInit {
 
   ngOnInit() {
     this.language = this.translate.currentLang;
-    let id = this.route.snapshot.paramMap.get('id');
-    this.findCity(id);
-    this.findWeather(id);
+    this.route.snapshot.paramMap.get('id');
+    this.route.paramMap.subscribe((params : ParamMap)=> {  
+      this.id=params.get('id');  
+      this.findCity(this.id);
+      this.findWeather(this.id);
+    }); 
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.language = this.translate.currentLang;
       this.loading = true;
-      this.findCity(id);
-      this.findWeather(id);
+      this.findCity(this.id);
+      this.findWeather(this.id);
     });
   }
 

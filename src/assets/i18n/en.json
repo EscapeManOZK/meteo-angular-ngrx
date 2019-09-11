@@ -2,7 +2,7 @@
     "meteo-angular-ngrx": {
       "layout": {
         "navBar": {
-          "title": "Your mother in underwear",
+          "title": "Weather angular with ngrx",
           "home": " Home",
           "contact": " Contact",
           "language": " Language",
