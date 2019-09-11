@@ -1,0 +1,81 @@
+<div nz-row>
+    <div nz-col nzSpan="12" nzOffset="6">
+        <h2 class="center" [translate]="'ta-mere-en-slip.meteo.title'"
+            [translateParams]="{cities: currentCity.LocalizedName}"></h2>
+    </div>
+</div>
+
+<nz-list class="noP" [nzDataSource]="currentWeather.DailyForecasts" [nzRenderItem]="item" [nzItemLayout]="'horizontal'"
+    [nzLoading]="loading">
+    <ng-template #item let-item>
+        <nz-list-item>
+            <nz-list-item-meta [nzDescription]="nzDescription">
+                <ng-template #nzDescription>
+                    <div nz-row nzType="flex" nzJustify="space-around" nzAlign="middle">
+                        <div nz-col nzSpan="1">
+                            <p class="center">{{item.Date}}</p>
+                        </div>
+                        <div nz-col nzSpan="9" nzOffset="1">
+                            <div nz-row nzType="flex" nzJustify="space-around" nzAlign="middle">
+                                <div nz-col nzSpan="2">
+                                    <p><img src="https://www.accuweather.com/images/weathericons/{{item.Day.Icon}}.svg"
+                                            alt="{{item.Day.IconPhrase}}"></p>
+                                </div>
+                                <div nz-col nzSpan="21" nzOffset="1">
+                                    <h4 class="center" [translate]="'ta-mere-en-slip.meteo.Day'"></h4>
+                                    <div nz-row nzType="flex" nzJustify="space-around" nzAlign="middle">
+                                        <div nz-col nzSpan="6">
+                                            <p class="center"><span class="Max">{{item.Temperature.Maximum.Value}}
+                                                    °{{item.Temperature.Maximum.Unit}}</span> /
+                                                <span>{{item.Temperature.Minimum.Value}}
+                                                    °{{item.Temperature.Minimum.Unit}}</span></p>
+                                        </div>
+                                        <div nz-col nzSpan="10" nzOffset="1">
+                                            <p class="center">{{item.Day.IconPhrase}}</p>
+                                        </div>
+                                        <div nz-col nzSpan="6" nzOffset="1">
+                                            <p class="center"><span
+                                                    [translate]="'ta-mere-en-slip.meteo.precipitation.'+item.Day.HasPrecipitation"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div nz-col nzSpan="1" nzOffset="1">
+                            <nz-divider class="divider" nzType="vertical"></nz-divider>
+                        </div>
+                        <div nz-col nzSpan="9" nzOffset="">
+                            <div nz-row nzType="flex" nzJustify="space-around" nzAlign="middle">
+                                <div nz-col nzSpan="2">
+                                    <p><img src="https://www.accuweather.com/images/weathericons/{{item.Night.Icon}}.svg"
+                                            alt="{{item.Night.IconPhrase}}"></p>
+                                </div>
+                                <div nz-col nzSpan="21" nzOffset="1">
+                                    <h4 class="center" [translate]="'ta-mere-en-slip.meteo.Night'"></h4>
+                                    <div nz-row nzType="flex" nzJustify="space-around" nzAlign="middle">
+                                        <div nz-col nzSpan="6">
+                                            <p class="center"><span class="Max">{{item.Temperature.Maximum.Value}}
+                                                    °{{item.Temperature.Maximum.Unit}}</span> /
+                                                <span>{{item.Temperature.Minimum.Value}}
+                                                    °{{item.Temperature.Minimum.Unit}}</span></p>
+                                        </div>
+                                        <div nz-col nzSpan="10" nzOffset="1">
+                                            <p class="center">{{item.Night.IconPhrase}}</p>
+                                        </div>
+                                        <div nz-col nzSpan="6" nzOffset="1">
+                                            <p class="center"><span
+                                                    [translate]="'ta-mere-en-slip.meteo.precipitation.'+item.Night.HasPrecipitation"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </ng-template>
+            </nz-list-item-meta>
+        </nz-list-item>
+    </ng-template>
+</nz-list>

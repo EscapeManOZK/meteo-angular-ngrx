@@ -1,0 +1,31 @@
+{
+    "ta-mere-en-slip": {
+      "layout": {
+        "navBar": {
+          "title": "Ta mère en slip",
+          "home": " Accueil",
+          "contact": " Contact",
+          "language": " Langage",
+          "searchPlaceholder": "Entrer un nom de ville"
+        }
+      },
+      "breadcrumb": {
+        "home": "Accueil",
+        "Contact": "Contact",
+        "404": "Erreur 404 - Page Introuvable",
+        "meteo": "Météo"
+      },
+      "home": {
+          "title": "HO YEAH FR"
+      },
+      "meteo": {
+        "title": "Météo de {{cities}}",
+        "Day": "Jour",
+        "Night": "Nuit",
+        "precipitation": {
+          "false": "Pas de précipitation annoncé",
+          "true": "Précipitation annoncé"
+        }
+      }
+    }
+  }

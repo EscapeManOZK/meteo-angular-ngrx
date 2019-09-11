@@ -1,0 +1,32 @@
+.logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+}
+.logo > p {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+}
+.logo > p > img {
+  max-height: 24px;
+  transition: all 0.2s ease-out;
+}
+.logo > p > span {
+  transition: all 0.2s ease-out;
+}
+.marginNormal {
+  margin: 4px 10px 4px 10px;
+}
+.marginCollapsed {
+  margin: 4px 12px;
+}
+.cursorNormal {
+  cursor: default;
+}
+.cursorNormal:hover {
+  color: rgba(255, 255, 255, 0.65);
+}
+.example-input {
+  display: block;
+}

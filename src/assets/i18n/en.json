@@ -1,0 +1,31 @@
+{
+    "ta-mere-en-slip": {
+      "layout": {
+        "navBar": {
+          "title": "Your mother in underwear",
+          "home": " Home",
+          "contact": " Contact",
+          "language": " Language",
+          "searchPlaceholder": "Enter city name"
+        }
+      },
+      "breadcrumb": {
+        "home": "Home",
+        "Contact": "Contact",
+        "404": "Error 404 - Page Not Found",
+        "meteo": "Weather"
+      },
+      "home": {
+          "title": "HO YEAH"
+      },
+      "meteo": {
+        "title": "Weather of {{cities}}",
+        "Day": "Day",
+        "Night": "Night",
+        "precipitation": {
+          "false": "No precipitation announced",
+          "true": "Announced precipitation"
+        }
+      }
+    }
+  }
