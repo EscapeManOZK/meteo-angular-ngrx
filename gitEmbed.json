@@ -11,12 +11,12 @@
         {
             "type": "ts",
             "label": "Weather service",
-            "path": "src/app/services/weather.service.ts"
+            "path": "src/app/service/weather.service.ts"
         },
         {
             "type": "ts",
             "label": "City service",
-            "path": "src/app/services/city.service.ts"
+            "path": "src/app/service/city.service.ts"
         }
     ]
 }
